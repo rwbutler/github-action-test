@@ -13,4 +13,5 @@ runs:
       swift-version: "5.9"
   - name: Get swift version
     run: swift --version # Swift 5.3.3
+    shell: bash
 
