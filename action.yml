@@ -12,10 +12,6 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - uses: swift-actions/setup-swift@v1.25.0
-      with:
-        swift-version: ${{ matrix.swift }}
-    - uses: actions/checkout@v4
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
     - id: random-number-generator
@@ -25,6 +21,10 @@ runs:
       shell: bash
     - run: goodbye.sh
       shell: bash
+    - uses: swift-actions/setup-swift@v1.25.0
+      with:
+        swift-version: ${{ matrix.swift }}
+    - uses: actions/checkout@v4
     - name: Build
       run: swift goodbye.swift
 
