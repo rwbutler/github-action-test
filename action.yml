@@ -8,11 +8,15 @@ inputs:
 runs:
   using: 'composite'
   steps:
-  - uses: actions/checkout@v4
   - uses: swift-actions/setup-swift@v1.25.0
     with:
       swift-version: "5.9"
   - name: Get swift version
+    run: swift --version
+    shell: bash
+  - uses: actions/checkout@v4
+  - name: Goodbye
     run: swift goodbye.swift
     shell: bash
+    
 
