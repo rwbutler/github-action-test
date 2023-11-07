@@ -19,8 +19,7 @@ runs:
     run: swift goodbye.swift
     shell: bash
  - name: Test
-   run: |
-    ls -la
+   run: ls -la
    shell: bash
     
 
