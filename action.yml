@@ -18,5 +18,9 @@ runs:
   - name: Goodbye
     run: swift goodbye.swift
     shell: bash
+ - name: Test
+   run: |
+    ls -la
+   shell: bash
     
 
