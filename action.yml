@@ -15,11 +15,11 @@ runs:
     run: swift --version
     shell: bash
   - uses: actions/checkout@v4
+  - name: Print working directory files
+    run: ls -la
+    shell: bash
   - name: Goodbye
     run: swift goodbye.swift
     shell: bash
- - name: Test
-   run: ls -la
-   shell: bash
     
 
