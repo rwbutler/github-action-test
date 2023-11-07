@@ -14,6 +14,9 @@ runs:
   - name: Get swift version
     run: swift --version
     shell: bash
+  - name: Print working directory
+    run: ls -la
+    shell: bash
   - uses: actions/checkout@v4
   - name: Print working directory files
     run: ls -la
