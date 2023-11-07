@@ -22,7 +22,7 @@ runs:
     run: ls -la
     shell: bash
   - name: Goodbye
-    run: swift goodbye.swift
+    run: swift "${{ github.action_path }}/goodbye.swift"
     shell: bash
     
 
